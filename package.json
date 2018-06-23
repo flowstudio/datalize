@@ -1,5 +1,5 @@
 {
-    "author": "Flow Studio",
+	"author": "Flow Studio",
 	"name": "datalize",
 	"description": "Parameter, query, form data validation and filtering for Koa and Express.",
 	"version": "0.1.0",
@@ -8,30 +8,47 @@
 		"url": "git://github.com/flowstudio/datalize.git"
 	},
 	"keywords": [
-        "form",
-        "query",
-        "parameter",
-        "data",
+		"form",
+		"query",
+		"parameter",
+		"data",
 		"validator",
 		"validation",
-        "express",
-        "koa"
-    ],
-    "contributors": [{
-        "name": "Andrej Adamcik"
-    }],
-	"dependencies": {},
-	"devDependencies": {},
+		"express",
+		"koa"
+	],
+	"contributors": [
+		{
+			"name": "Andrej Adamcik"
+		}
+	],
+	"dependencies": {
+		"lodash": "^4.17.10"
+	},
+	"devDependencies": {
+		"body-parser": "^1.18.3",
+		"express": "^4.16.3",
+		"koa": "^2.5.1",
+		"koa-body": "^4.0.3",
+		"koa-router": "^7.4.0",
+		"nodemon": "^1.17.5"
+	},
 	"main": "lib/index.js",
 	"files": [
 		"lib"
 	],
-	"scripts": {},
+	"scripts": {
+		"example": "nodemon -w lib -w examples examples",
+		"example:koa": "nodemon -w lib -w examples examples/koa.js",
+		"example:express": "nodemon -w lib -w examples examples/express.js"
+	},
 	"engines": {
 		"node": ">=8.0.0"
 	},
-	"licenses": [{
-		"type": "MIT",
-		"url": "https://github.com/freewil/express-form/raw/master/LICENSE"
-	}]
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/freewil/express-form/raw/master/LICENSE"
+		}
+	]
 }
