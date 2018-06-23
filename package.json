@@ -1,0 +1,37 @@
+{
+    "author": "Flow Studio",
+	"name": "datalize",
+	"description": "Parameter, query, form data validation and filtering for Koa and Express.",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/flowstudio/datalize.git"
+	},
+	"keywords": [
+        "form",
+        "query",
+        "parameter",
+        "data",
+		"validator",
+		"validation",
+        "express",
+        "koa"
+    ],
+    "contributors": [{
+        "name": "Andrej Adamcik"
+    }],
+	"dependencies": {},
+	"devDependencies": {},
+	"main": "lib/index.js",
+	"files": [
+		"lib"
+	],
+	"scripts": {},
+	"engines": {
+		"node": ">=8.0.0"
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "https://github.com/freewil/express-form/raw/master/LICENSE"
+	}]
+}
