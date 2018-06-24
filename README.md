@@ -49,7 +49,7 @@ app
 ### Express
 ```javascript
 const express = require('express');
-const datalize = require('../lib');
+const datalize = require('datalize');
 const field = datalize.field;
 
 const app = express();
