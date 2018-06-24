@@ -111,6 +111,11 @@ Type: `Boolean`, Default: `false`
 
 Auto validates form and throws `Data.Error` if there is any error.
 
+### autoConvertToArray
+Type: `Boolean`, Default: `false`
+
+Auto converts `field.array()` fields to array.
+
 
 ## Filters
 All filters and chainable.
