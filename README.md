@@ -162,6 +162,16 @@ Converts to null if is empty.
 
 ### field.range(min, max) - `condition`
 
+### field.length(min, max) - `condition`
+
+### field.int() - `condition`, `filter`
+
+### field.float() - `condition`, `filter`
+
+### field.id() - `condition`, `filter`
+
+### field.select(options) - `condition`
+
 ## Custom filter
 ```javascript
 field.custom(function(value, result, ctx) {

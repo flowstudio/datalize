@@ -8,6 +8,8 @@ app.use(require('koa-body')());
 
 const router = new Router();
 
+datalize.set('autoValidate', true);
+
 app.use(async (ctx, next) => {
 	try {
 		await next();
@@ -25,6 +27,13 @@ router.post('/', datalize([
 	field('firstname', 'Firstname').required(),
 	field('lastname', 'Lastname').requiredIf('firstname'),
 	field('isTerms').bool(true),
+	field('items').array().container([
+		field('name').required()
+	]),
+	field('billing').container([
+		field('firstname').required(),
+		field('lastname').requiredIf('firstname')
+	])
 ]), (ctx, next) => {
 	ctx.body = {
 		status: "success",
