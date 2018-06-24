@@ -40,7 +40,8 @@
 	"scripts": {
 		"example": "nodemon -w lib -w examples examples",
 		"example:koa": "nodemon -w lib -w examples examples/koa.js",
-		"example:express": "nodemon -w lib -w examples examples/express.js"
+		"example:express": "nodemon -w lib -w examples examples/express.js",
+		"release": "bash scripts/release.sh"
 	},
 	"engines": {
 		"node": ">=8.0.0"
