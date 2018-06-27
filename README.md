@@ -198,6 +198,29 @@ field.custom(async (value, result, ctx) => {
 });
 ```
 
+## Using custom filter globally
+```javascript
+const datalize = require('datalize');
+const field = datalize.field;
+
+datalize.Field.prototype.isSlug = function(chars = 'a-z-') {
+	const regexp = new RegExp(`^([${chars}]+)$`);
+
+	// make sure to return this.add() or this object to allow chaining
+	return this.add(function(value, result, ctx) {
+		if (!regexp.test(String(value))) {
+			throw new Error('%s contains invalid characters.');
+		}
+	});
+};
+
+// then the filter can be used anywhere
+datalize([
+	field('slug').required().isSlug()
+]);
+```
+
+
 ## Error handling
 ```javascript
 router.post('/', datalize([
