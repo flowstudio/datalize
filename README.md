@@ -253,3 +253,10 @@ app.use(function(err, req, res, next) {
 	}
 });
 ```
+
+---
+
+## License
+MIT
+
+Copyright (c) 2018 Andrej Adamcik
