@@ -174,6 +174,10 @@ Converts to null if is empty.
 
 ### field.length(min, max) - `condition`
 
+### field.minLength(min) - `condition`
+
+### field.maxLength(max) - `condition`
+
 ### field.int() - `condition`, `filter`
 
 ### field.float() - `condition`, `filter`
