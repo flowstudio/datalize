@@ -116,6 +116,11 @@ Type: `Boolean`, Default: `false`
 
 Auto converts `field.array()` fields to array.
 
+### error
+Type: `Error`, Default: `DataError`
+
+Error object thrown on autoValidate.
+
 
 ## Filters
 All filters and chainable.
