@@ -27,6 +27,8 @@ router.post('/', datalize([
 	field('firstname', 'Firstname').required(),
 	field('lastname', 'Lastname').requiredIf('firstname'),
 	field('isTerms').bool(true),
+	field('from').required().range(0, 30),
+	field('to').range(0, 30).min('from'),
 	field('items').array().container([
 		field('name').required()
 	]),

@@ -132,59 +132,105 @@ field('rooms').required().int().range(1, 20)
 - `filter`: updates value
 
 
-### field.required() - `condition`
+### field.required()
+- `condition`, `filter`
 
-### field.requiredIf(name, requiredValue) - `condition`
-name: `String|function`, requiredValue: `any` (optional)
+### field.requiredIf(name, requiredValue)
+- `condition`
+- name: `String|function`
+- requiredValue: `any` (optional)
 
-### field.array() - `filter`
-Returned value will be an Array.
+### field.array()
+- `filter`
+- Returned value will be an Array.
 
-### field.container(children) - `filter`
-Creates container will children fields, can be combined with `field.array()`.
+### field.container(children)
+- `filter`
+- children: `Array`
+- Creates container will children fields, can be combined with `field.array()`.
 
-### field.custom(fn) - `condition`, `filter`
+### field.custom(fn)
+- `condition`, `filter`
 
-### field.bool(requiredValue) - `condition`, `filter`
-Converts to boolean and if `requiredValue` is provided, the field's value must be equal to it.
+### field.bool(requiredValue)
+- `condition`, `filter`
+- requiredValue: `Boolean` (optional)
+- Converts to boolean and if `requiredValue` is provided, the field's value must be equal to it.
 
-### field.toggle(requiredValue) - `condition`, `filter`
-Converts to number (0, 1) and if `requiredValue` is provided, the field's value must be equal to it.
+### field.toggle(requiredValue)
+- `condition`, `filter`
+- requiredValue: `Number` (optional)
+- Converts to number (0, 1) and if `requiredValue` is provided, the field's value must be equal to it.
 
-### field.equal(compare) - `condition`
+### field.equal(compare)
+- `condition`
+- compare: `any`
 
-### field.default(defaultValue) - `filter`
+### field.default(defaultValue)
+- `filter`
+- defaultValue: `any`
 
-### field.nullable() - `filter`
-Converts to null if is empty.
+### field.nullable()
+- `filter`
+- Converts to null if is empty.
 
-### field.email() - `condition`
+### field.email()
+- `condition`
 
-### field.number() - `condition`, `filter`
+### field.number()
+- `condition`, `filter`
 
-### field.uppercase() - `filter`
+### field.uppercase()
+- `filter`
 
-### field.lowercase() - `filter`
+### field.lowercase()
+- `filter`
 
-### field.trim() - `filter`
+### field.trim()
+- `filter`
 
-### field.truncate(length) - `filter`
+### field.truncate(length)
+- `filter`
+- length: `Number`
 
-### field.range(min, max) - `condition`
+### field.range(min, max)
+- `condition`, `filter`
+- min: `Number`
+- max: `Number`
 
-### field.length(min, max) - `condition`
+### field.min(min)
+- `condition`, `filter`
+- min: `Number|String` (can be a number or name of a field)
 
-### field.minLength(min) - `condition`
+### field.max(max)
+- `condition`, `filter`
+- max: `Number|String` (can be a number or name of a field)
 
-### field.maxLength(max) - `condition`
+### field.length(min, max)
+- `condition`
+- min: `Number`
+- max: `Number`
 
-### field.int() - `condition`, `filter`
+### field.minLength(min)
+- `condition`
+- min: `Number`
 
-### field.float() - `condition`, `filter`
+### field.maxLength(max)
+- `condition`
+- max: `Number`
 
-### field.id() - `condition`, `filter`
+### field.int()
+- `condition`, `filter`
 
-### field.select(options) - `condition`
+### field.float()
+- `condition`, `filter`
+
+### field.id()
+- `condition`, `filter`
+
+### field.select(options)
+- `condition`
+- options: `Array`
 
 ## Custom filter
 ```javascript
