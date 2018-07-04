@@ -195,16 +195,16 @@ field('rooms').required().int().range(1, 20)
 
 ### field.range(min, max)
 - `condition`, `filter`
-- min: `Number`
-- max: `Number`
+- min: `Number|String|Function` (can be a number or name of a field or function that returns number)
+- max: `Number|String|Function` (can be a number or name of a field or function that returns number)
 
 ### field.min(min)
 - `condition`, `filter`
-- min: `Number|String` (can be a number or name of a field)
+- min: `Number|String|Function` (can be a number or name of a field or function that returns number)
 
 ### field.max(max)
 - `condition`, `filter`
-- max: `Number|String` (can be a number or name of a field)
+- max: `Number|String|Function` (can be a number or name of a field or function that returns number)
 
 ### field.length(min, max)
 - `condition`
