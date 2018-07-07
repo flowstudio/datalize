@@ -4,7 +4,13 @@ const datalize = require('../lib');
 const field = datalize.field;
 
 const app = new Koa();
-app.use(require('koa-body')());
+app.use(require('koa-body')({
+	nableTypes: ['json', 'form'],
+	multipart: true,
+	formidable: {
+		maxFileSize: 32 * 1024 * 1024,
+	}
+}));
 
 const router = new Router();
 
@@ -35,7 +41,8 @@ router.post('/', datalize([
 	field('billing').container([
 		field('firstname').required(),
 		field('lastname').requiredIf('firstname')
-	])
+	]),
+	field('photo').file().mime(['image/png']),
 ]), (ctx, next) => {
 	ctx.body = {
 		status: "success",
