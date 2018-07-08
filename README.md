@@ -149,6 +149,10 @@ field('rooms').required().int().range(1, 20)
 - children: `Array`
 - Creates container will children fields, can be combined with `field.array()`.
 
+### field.split(separator = ',')
+- `filter`
+- Converts value to array via splitting by separator.
+
 ### field.custom(fn)
 - `condition`, `filter`
 

@@ -43,6 +43,7 @@ router.post('/', datalize([
 		field('lastname').requiredIf('firstname')
 	]),
 	field('photo').file().mime(['image/png']),
+	field('types').split(',').int()
 ]), (ctx, next) => {
 	ctx.body = {
 		status: "success",
