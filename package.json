@@ -2,7 +2,7 @@
 	"author": "Flow Studio",
 	"name": "datalize",
 	"description": "Parameter, query, form data validation and filtering for Koa and Express.",
-	"version": "0.2.72",
+	"version": "0.2.73",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/flowstudio/datalize.git"
