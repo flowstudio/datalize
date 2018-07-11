@@ -133,7 +133,7 @@ field('rooms').required().int().range(1, 20)
 
 
 ### field.required()
-- `condition`, `filter`
+- `condition`
 
 ### field.requiredIf(name, requiredValue)
 - `condition`
@@ -235,6 +235,10 @@ field('rooms').required().int().range(1, 20)
 ### field.select(options)
 - `condition`
 - options: `Array`
+
+### field.file() - experimental
+- `filter`
+- Gets file from `req.files` object.
 
 ## Custom filter
 ```javascript
