@@ -138,6 +138,10 @@ field('rooms').required().int().range(1, 20)
 ### field.required()
 - `condition`
 
+### field.optional()
+- `filter`
+- The field is removed if value is undefined.
+
 ### field.requiredIf(name, requiredValue)
 - `condition`
 - name: `String|function`
@@ -239,9 +243,20 @@ field('rooms').required().int().range(1, 20)
 - `condition`
 - options: `Array`
 
-### field.file() - experimental
+## File filters
+
+### field.file()
 - `filter`
 - Gets file from `req.files` object.
+
+### field.mime(types)
+- `condition`
+- types: `Array`
+
+### field.size(limit)
+- `condition`
+- limit: `Number` in Bytes
+
 
 ## Custom filter
 ```javascript
