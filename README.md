@@ -138,14 +138,24 @@ field('rooms').required().int().range(1, 20)
 ### field.required()
 - `condition`
 
+### field.requiredIf(nameOrFn, requiredValue)
+- `condition`
+- nameOrFn: `String|function`
+- requiredValue: `any` (optional) used only if nameOrFn is string 
+
 ### field.optional()
 - `filter`
 - The field is removed if value is undefined.
 
-### field.requiredIf(name, requiredValue)
-- `condition`
-- name: `String|function`
-- requiredValue: `any` (optional)
+### field.optionalIf(nameOrFn, requiredValue)
+- `filter`
+- nameOrFn: `String|function`
+- requiredValue: `any` (optional) used only if nameOrFn is string
+- The field is removed if value is undefined and conditions are passed.
+
+### field.patch()
+- `filter`
+- The same as optional but only if request's method is PATCH.
 
 ### field.array()
 - `filter`
