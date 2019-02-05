@@ -2,6 +2,8 @@
 
 Parameter, query, form data validation and filtering for Koa and Express.
 
+See also [this post about it on the Toptal Engineering Blog](https://www.toptal.com/nodejs/smart-node-js-form-validation).
+
 
 [![npm](https://img.shields.io/npm/v/datalize.svg)
 ![npm](https://img.shields.io/npm/dm/datalize.svg)](https://www.npmjs.com/package/datalize)
