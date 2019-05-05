@@ -30,7 +30,7 @@ app.use(async (ctx, next) => {
 
 router.post('/', datalize([
 	field('email', 'E-mail').required().email(),
-	field('firstname', 'Firstname').required(),
+	field('firstname').required(),
 	field('lastname', 'Lastname').requiredIf('firstname'),
 	field('isTerms').bool(true),
 	field('from').required().range(0, 30),

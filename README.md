@@ -121,6 +121,11 @@ Type: `Boolean`, Default: `false`
 
 Auto converts `field.array()` fields to array.
 
+### translator
+Type: `String|Function`, Default: `null`
+
+Translates errors using the function or if string is specified it use context's `ctx[translator]` method to translate errors.
+
 ### error
 Type: `Error`, Default: `DataError`
 
